@@ -1,9 +1,7 @@
 package com.faksho.codeB_I1.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import com.faksho.codeB_I1.model.stages.Stage;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -13,11 +11,12 @@ public class GameSession {
     @Id @GeneratedValue
     private Long id;
 
-    private Stage currentStage; // TODO necesito un handler a parte para cambiar esto
+    @OneToOne
+    private Stage currentStage; // TODO handler needed to change this
 
-    private boolean acceptingAnswers; // TODO revisar esto, es una idea
+    private boolean acceptingAnswers; // TODO check this out
 
-    @OneToMany(mappedBy = "game")
+    @OneToMany(mappedBy = "gameSession")
     private List<Stage> stages;
 
 }

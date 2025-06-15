@@ -1,6 +1,6 @@
 package com.faksho.codeB_I1.logic;
 
-import com.faksho.codeB_I1.model.Stage;
+import com.faksho.codeB_I1.model.stages.Stage;
 import java.util.List;
 
 public interface IStageActions {
@@ -9,7 +9,6 @@ public interface IStageActions {
     List<Stage> getAllStages();
     void createStage(String question,
                      List<String> possibleAnswers,
-                     byte[] attachment,
                      int correctAnswerIndex);
     void createStage(Stage stage);
 

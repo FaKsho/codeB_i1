@@ -1,11 +1,10 @@
 package com.faksho.codeB_I1.controller;
 
 import com.faksho.codeB_I1.logic.IStageActions;
-import com.faksho.codeB_I1.model.Stage;
+import com.faksho.codeB_I1.model.stages.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
