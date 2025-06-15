@@ -13,7 +13,7 @@ public class StageActions implements IStageActions{
 
     @Override
     public void createStage(String question,
-                            String[] possibleAnswers,
+                            List<String> possibleAnswers,
                             byte[] attachment,
                             int correctAnswerIndex) {
 

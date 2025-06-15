@@ -8,7 +8,7 @@ public interface IStageActions {
     Stage getStage(Long id);
     List<Stage> getAllStages();
     void createStage(String question,
-                     String[] possibleAnswers,
+                     List<String> possibleAnswers,
                      byte[] attachment,
                      int correctAnswerIndex);
     void createStage(Stage stage);
