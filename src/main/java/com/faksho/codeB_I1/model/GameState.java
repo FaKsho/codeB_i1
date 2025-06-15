@@ -6,10 +6,10 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-public class GameSession {
+public class GameState {
 
-    @Id @GeneratedValue
-    private Long id;
+    @Id
+    private Long id = 1L;
 
     @OneToOne
     private Stage currentStage; // TODO handler needed to change this
@@ -18,5 +18,4 @@ public class GameSession {
 
     @OneToMany(mappedBy = "gameSession")
     private List<Stage> stages;
-
 }

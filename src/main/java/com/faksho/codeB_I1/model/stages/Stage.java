@@ -1,7 +1,6 @@
 package com.faksho.codeB_I1.model.stages;
 
-import com.faksho.codeB_I1.model.GameSession;
-import jakarta.annotation.Nullable;
+import com.faksho.codeB_I1.model.GameState;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,7 +26,7 @@ public class Stage {
     private int correctAnswerIndex;
 
     @ManyToOne
-    private GameSession gameSession;
+    private GameState gameState;
 
     public Stage(String question, List<String> possibleAnswers, int correctAnswerIndex) {
         this.question = question;
